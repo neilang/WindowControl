@@ -2,12 +2,8 @@ h1. WindowControl
 
 Safari extension that stops web pages from opening new windows without the navigation bar, status bar, hidden scroll bars etc. Also stops pages from resizing or moving windows.
 
-h2. Install
+h2. Download and Install
 
-  # Sign up for "safari developer program":http://developer.apple.com
-  # Generate a developer certificate (if you don't already have one)
-  # Download the project: git clone git@github.com:neilang/WindowControl.git
-  # In your safari menu, go to: Developer > Show Extension Builder
-  # In the extension builder, click: "Add Extension"
-  # Add WindowControl.safariextension and click "Install"
-  # Reload any open windows
+You can download the extension "here":https://github.com/downloads/neilang/WindowControl/WindowControl.safariextz. Double click the extension file to install it in safari. 
+
+If you wish to remove it, go to your safari preferences > extensions tab > WindowControl > uninstall.
