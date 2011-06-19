@@ -1,0 +1,12 @@
+<script type="text/javascript" charset="utf-8">
+  function handleSettingsChange (event) {
+    var script = "__windowcontrol_" + event.key + " = " + event.newValue + ";";
+    // TODO: send this on every open window and tab
+    safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("injectThis", script);
+  }
+  
+  safari.extension.settings.addEventListener('change', handleSettingsChange, true);
+  
+  // TODO: set extension settings onload
+  
+</script>

@@ -4,6 +4,8 @@
 <dict>
 	<key>Author</key>
 	<string>Neil Ang</string>
+	<key>Builder Version</key>
+	<string>7534.45</string>
 	<key>CFBundleDisplayName</key>
 	<string>WindowControl</string>
 	<key>CFBundleIdentifier</key>
@@ -11,11 +13,14 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>Chrome</key>
-	<dict/>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
@@ -32,7 +37,7 @@
 		</array>
 	</dict>
 	<key>Description</key>
-	<string>Stop web pages being able to control your window</string>
+	<string>Stop web pages resizing or moving your browser window</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
