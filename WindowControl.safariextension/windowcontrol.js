@@ -26,7 +26,7 @@ window.open = function(url, name, properties) {
   }
   
   properties = props.join(',');
-  alert(properties);
+  
   return __override_windowcontrols(__window_open(url, name, properties));
 };
 
