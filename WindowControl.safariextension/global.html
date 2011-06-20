@@ -24,6 +24,8 @@
     var script  = '';
         script += prefix + "disallowResize = " + safari.extension.settings.disallowResize + ";" ;
         script += prefix + "disallowMove = " + safari.extension.settings.disallowMove + ";" ;
+        script += prefix + "disallowStatusBar = " + safari.extension.settings.disallowStatusBar + ";" ;
+        script += prefix + "disallowMenuBar = " + safari.extension.settings.disallowMenuBar + ";" ;
     
     event.target.page.dispatchMessage("injectThis", script);
   }

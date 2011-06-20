@@ -22,5 +22,25 @@
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>disallowStatusBar</string>
+		<key>Title</key>
+		<string>Stop scripts removing the status bar</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>disallowMenuBar</string>
+		<key>Title</key>
+		<string>Stop scripts removing the menu bar</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
 </array>
 </plist>

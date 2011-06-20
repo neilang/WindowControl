@@ -1,10 +1,33 @@
 var __windowcontrol_disallowResize;
 var __windowcontrol_disallowMove;
+var __windowcontrol_disallowStatusBar;
+var __windowcontrol_disallowMenuBar;
 
 var __window_open = window.open;
 window.open = function(url, name, properties) {
-  // TODO: remove disallowed properties on window open
-  return __override_windowcontrols(__window_open(url, name));
+  var props = properties.split(',');
+  
+  // Override properties
+  for (var i=0; i < props.length; i++) {
+    
+    if(__windowcontrol_disallowStatusBar && props[i].match(/status/i)){
+      props[i] = 'status=1';
+    }
+    
+    if(__windowcontrol_disallowMenuBar && props[i].match(/(toolbar|location|menubar)/i)){
+      var menubar = props[i].match(/(toolbar|location|menubar)/i)[0];
+      props[i] = menubar + '=1';
+    }
+    
+    if (__windowcontrol_disallowResize && props[i].match(/(width|height)/i)){
+      props[i] = '';
+    }
+    
+  }
+  
+  properties = props.join(',');
+  alert(properties);
+  return __override_windowcontrols(__window_open(url, name, properties));
 };
 
 function __override_windowcontrols(win) {
