@@ -7,10 +7,3 @@ h2. Download and Install
 You can download the extension "here":https://github.com/downloads/neilang/WindowControl/WindowControl.safariextz. Double click the extension file to install it in safari. 
 
 If you wish to remove it, go to your safari preferences > extensions tab > WindowControl > uninstall.
-
-h3. TODO
-
- * -Add window resizing setting toggle-
- * -Add window moving setting toggle-
- * Add window status bar setting toggle
- * Override properties on newly opened windows
