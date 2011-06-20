@@ -30,11 +30,6 @@
 				<string>main.js</string>
 			</array>
 		</dict>
-		<key>Whitelist</key>
-		<array>
-			<string>http://*/*</string>
-			<string>https://*/*</string>
-		</array>
 	</dict>
 	<key>Description</key>
 	<string>Stop web pages resizing or moving your browser window</string>

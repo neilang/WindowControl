@@ -10,6 +10,7 @@ If you wish to remove it, go to your safari preferences > extensions tab > Windo
 
 h3. TODO
 
- * Add window resizing setting toggle
- * Add window moving setting toggle
+ * -Add window resizing setting toggle-
+ * -Add window moving setting toggle-
  * Add window status bar setting toggle
+ * Override properties on newly opened windows

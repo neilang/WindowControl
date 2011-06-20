@@ -1,12 +1,43 @@
 <script type="text/javascript" charset="utf-8">
-  function handleSettingsChange (event) {
-    var script = "__windowcontrol_" + event.key + " = " + event.newValue + ";";
-    // TODO: send this on every open window and tab
+  
+  var prefix = "__windowcontrol_";
+  
+  function handleSettingsChange(event){
+    var script = prefix + event.key + " = " + event.newValue + ";";
+    
+    // Currently, only updating the active tab.
+    // Sending to all windows/tabs is buggy
     safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("injectThis", script);
+    
+    // Send to all windows and all tabs
+    // var browserWindows = safari.application.browserWindows;
+    // for (var i=0; i < browserWindows.length; i++) {
+    //   var tabs = browserWindows[i].tabs;
+    //   for (var i=0; i < tabs.length; i++) {
+    //     tabs[i].page.dispatchMessage("injectThis", script);
+    //   };
+    // };
+    
   }
   
-  safari.extension.settings.addEventListener('change', handleSettingsChange, true);
+  function initSettings(event) {
+    var script  = '';
+        script += prefix + "disallowResize = " + safari.extension.settings.disallowResize + ";" ;
+        script += prefix + "disallowMove = " + safari.extension.settings.disallowMove + ";" ;
+    
+    event.target.page.dispatchMessage("injectThis", script);
+  }
   
-  // TODO: set extension settings onload
+  function handleMessage(event) {
+    if(event.name === "initSettings"){
+      initSettings(event);
+    }
+  }
+  
+  // Listen for messages from the the injected script
+  safari.application.addEventListener("message", handleMessage, false);
+  
+  // Listen for changes to settings
+  safari.extension.settings.addEventListener("change", handleSettingsChange, true);
   
 </script>

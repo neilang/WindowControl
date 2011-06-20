@@ -23,8 +23,11 @@ function handleMessage(event) {
   }
 }
 
-// Setup page
+// Setup window control functions
 injectBaseFunctions();
+
+// Callback to global.html to get settings
+safari.self.tab.dispatchMessage("initSettings", null);
 
 // Listen for messages from global.html
 safari.self.addEventListener("message", handleMessage, false);

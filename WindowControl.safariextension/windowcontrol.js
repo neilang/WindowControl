@@ -1,5 +1,5 @@
-var __windowcontrol_disallowResize = true;
-var __windowcontrol_disallowMove   = true;
+var __windowcontrol_disallowResize;
+var __windowcontrol_disallowMove;
 
 var __window_open = window.open;
 window.open = function(url, name, properties) {
